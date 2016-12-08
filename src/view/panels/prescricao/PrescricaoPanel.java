@@ -1,7 +1,6 @@
 package view.panels.prescricao;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,6 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import view.FontsProj;
 import view.panels.MainPanel;
 import view.panels.consulta.ListConsRealiPanel;
 
@@ -36,6 +36,8 @@ public class PrescricaoPanel extends JPanel {
 		setLayout(null);
 		//setUndecorated(true);
 		
+		FontsProj fontes = new FontsProj();
+		
 		JButton btnAltPresc = new JButton("Alterar Prescrição");
 		btnAltPresc.setToolTipText("Alterar Prescrição");
 		btnAltPresc.addActionListener(new ActionListener() {
@@ -45,7 +47,7 @@ public class PrescricaoPanel extends JPanel {
 				frame.repaint();
 			}
 		});
-		btnAltPresc.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnAltPresc.setFont(fontes.Raleway);
 		btnAltPresc.setForeground(new Color(255, 255, 255));
 		btnAltPresc.setBackground(new Color(153, 51, 255));
 		btnAltPresc.setBorder(null);
@@ -61,7 +63,7 @@ public class PrescricaoPanel extends JPanel {
 			}
 		});
 		btnConsPresc.setToolTipText("Consultar Prescrição");
-		btnConsPresc.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnConsPresc.setFont(fontes.Raleway);
 		btnConsPresc.setForeground(new Color(255, 255, 255));
 		btnConsPresc.setBackground(new Color(153, 51, 255));
 		btnConsPresc.setBorder(null);
@@ -77,7 +79,7 @@ public class PrescricaoPanel extends JPanel {
 				frame.repaint();
 			}
 		});
-		btnVoltar.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnVoltar.setFont(fontes.Raleway);
 		btnVoltar.setForeground(new Color(255, 255, 255));
 		btnVoltar.setBackground(new Color(153, 51, 255));
 		btnVoltar.setBorder(null);
@@ -85,7 +87,7 @@ public class PrescricaoPanel extends JPanel {
 		add(btnVoltar);
 		
 		JLabel lblPresc = new JLabel("Prescrições");
-		lblPresc.setFont(new Font("UnDinaru", Font.BOLD, 40));
+		lblPresc.setFont(fontes.unDinaruB);
 		lblPresc.setForeground(new Color(255, 255, 255));
 		lblPresc.setBounds(307, 35, 190, 75);
 		add(lblPresc);
@@ -100,7 +102,7 @@ public class PrescricaoPanel extends JPanel {
 		});
 		btnCadPresc.setToolTipText("Cadastrar Prescrição");
 		btnCadPresc.setForeground(Color.WHITE);
-		btnCadPresc.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnCadPresc.setFont(fontes.Raleway);
 		btnCadPresc.setBackground(new Color(153, 51, 255));
 		btnCadPresc.setBorder(null);
 		btnCadPresc.setBounds(250, 135, 300, 40);
@@ -116,14 +118,14 @@ public class PrescricaoPanel extends JPanel {
 		});
 		btnInicio.setToolTipText("Inicio");
 		btnInicio.setForeground(Color.WHITE);
-		btnInicio.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnInicio.setFont(fontes.Raleway);
 		btnInicio.setBorder(null);
 		btnInicio.setBackground(new Color(153, 51, 255));
 		btnInicio.setBounds(250, 480, 300, 40);
 		add(btnInicio);
 		
 		JLabel background = new JLabel();
-		background.setIcon(new ImageIcon("/home/wanderlan/workspace/M@e Digital/img/background.png"));
+		background.setIcon(new ImageIcon("./img/backgroundx.png"));
 		background.setBounds(0, 0, 800, 600);
 	    add(background);
 

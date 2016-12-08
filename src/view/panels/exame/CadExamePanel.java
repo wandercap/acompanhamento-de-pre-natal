@@ -1,7 +1,6 @@
 package view.panels.exame;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -18,6 +17,7 @@ import javax.swing.border.EmptyBorder;
 
 import control.dao.textfiledao.TextFileExameDao;
 import model.Exame;
+import view.FontsProj;
 
 /**
  * A classe {@code CadExamePanel} gera o panel para o cadastro de exames
@@ -45,21 +45,23 @@ public class CadExamePanel extends JPanel {
 		setBorder(new EmptyBorder(5, 5, 5, 5));
 		setLayout(null);
 		
+		FontsProj fontes = new FontsProj();
+		
 		JLabel lblData = new JLabel("Data");
 		lblData.setBounds(196, 137, 70, 15);
 		lblData.setForeground(new Color(255, 255, 255));
-		lblData.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		lblData.setFont(fontes.unDinaru);
 		add(lblData);
 		
 		JLabel lblAgendarExame = new JLabel("Agendar Exame");
 		lblAgendarExame.setBounds(270, 35, 288, 48);
-		lblAgendarExame.setFont(new Font("UnDinaru", Font.BOLD, 40));
+		lblAgendarExame.setFont(fontes.unDinaruB);
 		lblAgendarExame.setForeground(new Color(255, 255, 255));
 		add(lblAgendarExame);
 		
 		JLabel lblLocal = new JLabel("Local");
 		lblLocal.setBounds(196, 194, 143, 15);
-		lblLocal.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		lblLocal.setFont(fontes.unDinaru);
 		lblLocal.setForeground(new Color(255, 255, 255));
 		add(lblLocal);
 		
@@ -67,14 +69,14 @@ public class CadExamePanel extends JPanel {
 		txtLocal.setBounds(196, 209, 410, 30);
 		txtLocal.setToolTipText("");
 		txtLocal.setBorder(null);
-		txtLocal.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		txtLocal.setFont(fontes.unDinaru);
 		txtLocal.setForeground(new Color(102, 102, 102));
 		add(txtLocal);
 		txtLocal.setColumns(10);
 		
 		JLabel lblEspecialidade = new JLabel("Especialidade");
 		lblEspecialidade.setBounds(470, 137, 114, 15);
-		lblEspecialidade.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		lblEspecialidade.setFont(fontes.unDinaru);
 		lblEspecialidade.setForeground(new Color(255, 255, 255));
 		add(lblEspecialidade);
 		
@@ -82,7 +84,7 @@ public class CadExamePanel extends JPanel {
 		txtEspec.setBounds(470, 152, 136, 30);
 		txtEspec.setToolTipText("");
 		txtEspec.setBorder(null);
-		txtEspec.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		txtEspec.setFont(fontes.unDinaru);
 		txtEspec.setForeground(new Color(102, 102, 102));
 		add(txtEspec);
 		txtEspec.setColumns(10);
@@ -90,21 +92,21 @@ public class CadExamePanel extends JPanel {
 		JLabel lblMedico = new JLabel("Médico");
 		lblMedico.setBounds(196, 251, 114, 15);
 		lblMedico.setForeground(new Color(255, 255, 255));
-		lblMedico.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		lblMedico.setFont(fontes.unDinaru);
 		add(lblMedico);
 		
 		txtMedico = new JTextField();
 		txtMedico.setBounds(196, 266, 410, 30);
 		txtMedico.setToolTipText("");
 		txtMedico.setBorder(null);
-		txtMedico.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		txtMedico.setFont(fontes.unDinaru);
 		txtMedico.setForeground(new Color(102, 102, 102));
 		add(txtMedico);
 		txtMedico.setColumns(10);
 		
 		JLabel lblComentarios = new JLabel("Comentários");
 		lblComentarios.setBounds(196, 308, 114, 15);
-		lblComentarios.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		lblComentarios.setFont(fontes.unDinaru);
 		lblComentarios.setForeground(new Color(255, 255, 255));
 		add(lblComentarios);
 		
@@ -121,7 +123,7 @@ public class CadExamePanel extends JPanel {
 			}
 		});
 		btnAgendar.setToolTipText("Agendar");
-		btnAgendar.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnAgendar.setFont(fontes.Raleway);
 		btnAgendar.setBackground(new Color(153, 51, 255));
 		btnAgendar.setForeground(new Color(255, 255, 255));
 		btnAgendar.setBorder(null);
@@ -139,14 +141,14 @@ public class CadExamePanel extends JPanel {
 		btnVoltar.setToolTipText("Voltar");
 		btnVoltar.setBackground(new Color(153, 51, 255));
 		btnVoltar.setForeground(new Color(255, 255, 255));
-		btnVoltar.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnVoltar.setFont(fontes.Raleway);
 		btnVoltar.setBorder(null);
 		btnVoltar.setBounds(50, 530, 200, 40);
 		add(btnVoltar);
 		
 		JLabel lblHorario = new JLabel("Horário");
 		lblHorario.setForeground(new Color(255, 255, 255));
-		lblHorario.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		lblHorario.setFont(fontes.unDinaru);
 		lblHorario.setBounds(358, 137, 143, 15);
 		add(lblHorario);
 		
@@ -163,12 +165,12 @@ public class CadExamePanel extends JPanel {
 		txtComents = new JTextArea();
 		txtComents.setForeground(new Color(102, 102, 102));
 		txtComents.setBorder(null);
-		txtComents.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		txtComents.setFont(fontes.unDinaru);
 		txtComents.setBounds(196, 326, 410, 137);
 		add(txtComents);
 		
 		JLabel background = new JLabel();
-		background.setIcon(new ImageIcon("/home/wanderlan/workspace/M@e Digital/img/background.png"));
+		background.setIcon(new ImageIcon("./img/backgroundx.png"));
 		background.setBounds(0, 0, 800, 600);
 	    add(background);
 	}

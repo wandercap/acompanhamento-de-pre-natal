@@ -1,7 +1,6 @@
 package view.panels.procedimento;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,6 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import view.FontsProj;
 import view.panels.MainPanel;
 import view.panels.ProntuarioPanel;
 
@@ -35,6 +35,8 @@ public class ProcedimentosPanel extends JPanel {
 		setLayout(null);
 		//setUndecorated(true);
 		
+		FontsProj fontes = new FontsProj();
+		
 		JButton btnProcAgendados = new JButton("Procedimentos Agendados");
 		btnProcAgendados.setToolTipText("Procedimentos Agendados");
 		btnProcAgendados.addActionListener(new ActionListener() {
@@ -44,7 +46,7 @@ public class ProcedimentosPanel extends JPanel {
 				frame.repaint();
 			}
 		});
-		btnProcAgendados.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnProcAgendados.setFont(fontes.Raleway);
 		btnProcAgendados.setForeground(new Color(255, 255, 255));
 		btnProcAgendados.setBackground(new Color(153, 51, 255));
 		btnProcAgendados.setBorder(null);
@@ -60,7 +62,7 @@ public class ProcedimentosPanel extends JPanel {
 			}
 		});
 		btnProcRealizados.setToolTipText("Procedimentos Realizados");
-		btnProcRealizados.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnProcRealizados.setFont(fontes.Raleway);
 		btnProcRealizados.setForeground(new Color(255, 255, 255));
 		btnProcRealizados.setBackground(new Color(153, 51, 255));
 		btnProcRealizados.setBorder(null);
@@ -76,7 +78,7 @@ public class ProcedimentosPanel extends JPanel {
 				frame.repaint();
 			}
 		});
-		btnVoltar.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnVoltar.setFont(fontes.Raleway);
 		btnVoltar.setForeground(new Color(255, 255, 255));
 		btnVoltar.setBackground(new Color(153, 51, 255));
 		btnVoltar.setBorder(null);
@@ -84,7 +86,7 @@ public class ProcedimentosPanel extends JPanel {
 		add(btnVoltar);
 		
 		JLabel lblExames = new JLabel("Procedimentos");
-		lblExames.setFont(new Font("UnDinaru", Font.BOLD, 40));
+		lblExames.setFont(fontes.unDinaruB);
 		lblExames.setForeground(new Color(255, 255, 255));
 		lblExames.setBounds(275, 35, 258, 75);
 		add(lblExames);
@@ -99,7 +101,7 @@ public class ProcedimentosPanel extends JPanel {
 		});
 		btnAgendarProc.setToolTipText("Agendar Procedimento");
 		btnAgendarProc.setForeground(Color.WHITE);
-		btnAgendarProc.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnAgendarProc.setFont(fontes.Raleway);
 		btnAgendarProc.setBackground(new Color(153, 51, 255));
 		btnAgendarProc.setBorder(null);
 		btnAgendarProc.setBounds(250, 135, 300, 40);
@@ -115,14 +117,14 @@ public class ProcedimentosPanel extends JPanel {
 		});
 		btnInicio.setToolTipText("Inicio");
 		btnInicio.setForeground(Color.WHITE);
-		btnInicio.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnInicio.setFont(fontes.Raleway);
 		btnInicio.setBorder(null);
 		btnInicio.setBackground(new Color(153, 51, 255));
 		btnInicio.setBounds(250, 480, 300, 40);
 		add(btnInicio);
 		
 		JLabel background = new JLabel();
-		background.setIcon(new ImageIcon("/home/wanderlan/workspace/M@e Digital/img/background.png"));
+		background.setIcon(new ImageIcon("./img/backgroundx.png"));
 		background.setBounds(0, 0, 800, 600);
 	    add(background);
 	}

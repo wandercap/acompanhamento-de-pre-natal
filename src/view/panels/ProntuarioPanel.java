@@ -1,7 +1,6 @@
 package view.panels;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,6 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import view.FontsProj;
 import view.panels.consulta.ConsultasPanel;
 import view.panels.exame.ExamesPanel;
 import view.panels.gestante.ListGestPanel;
@@ -37,6 +37,8 @@ public class ProntuarioPanel extends JPanel {
 		setLayout(null);
 		//setUndecorated(true);
 		
+		FontsProj fontes = new FontsProj();
+		
 		JButton btnConsultas = new JButton("Consultas");
 		btnConsultas.setToolTipText("Consultas");
 		btnConsultas.addActionListener(new ActionListener() {
@@ -46,7 +48,7 @@ public class ProntuarioPanel extends JPanel {
 				frame.repaint();
 			}
 		});
-		btnConsultas.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnConsultas.setFont(fontes.Raleway);
 		btnConsultas.setForeground(new Color(255, 255, 255));
 		btnConsultas.setBackground(new Color(153, 51, 255));
 		btnConsultas.setBorder(null);
@@ -62,7 +64,7 @@ public class ProntuarioPanel extends JPanel {
 			}
 		});
 		btnExames.setToolTipText("Exames");
-		btnExames.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnExames.setFont(fontes.Raleway);
 		btnExames.setForeground(new Color(255, 255, 255));
 		btnExames.setBackground(new Color(153, 51, 255));
 		btnExames.setBorder(null);
@@ -78,7 +80,7 @@ public class ProntuarioPanel extends JPanel {
 				frame.repaint();
 			}
 		});
-		btnVoltar.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnVoltar.setFont(fontes.Raleway);
 		btnVoltar.setForeground(new Color(255, 255, 255));
 		btnVoltar.setBackground(new Color(153, 51, 255));
 		btnVoltar.setBorder(null);
@@ -86,7 +88,7 @@ public class ProntuarioPanel extends JPanel {
 		add(btnVoltar);
 		
 		JLabel lblProntuario = new JLabel("Prontuário");
-		lblProntuario.setFont(new Font("UnDinaru", Font.BOLD, 40));
+		lblProntuario.setFont(fontes.unDinaruB);
 		lblProntuario.setForeground(new Color(255, 255, 255));
 		lblProntuario.setBounds(310, 35, 178, 75);
 		add(lblProntuario);
@@ -101,7 +103,7 @@ public class ProntuarioPanel extends JPanel {
 		});
 		btnProcedimentos.setToolTipText("Procedimentos");
 		btnProcedimentos.setForeground(Color.WHITE);
-		btnProcedimentos.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnProcedimentos.setFont(fontes.Raleway);
 		btnProcedimentos.setBackground(new Color(153, 51, 255));
 		btnProcedimentos.setBorder(null);
 		btnProcedimentos.setBounds(250, 270, 300, 40);
@@ -117,14 +119,14 @@ public class ProntuarioPanel extends JPanel {
 		});
 		btnInicio.setToolTipText("Inicio");
 		btnInicio.setForeground(Color.WHITE);
-		btnInicio.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnInicio.setFont(fontes.Raleway);
 		btnInicio.setBorder(null);
 		btnInicio.setBackground(new Color(153, 51, 255));
 		btnInicio.setBounds(250, 480, 300, 40);
 		add(btnInicio);
 		
 		JLabel background = new JLabel();
-		background.setIcon(new ImageIcon("/home/wanderlan/workspace/M@e Digital/img/background.png"));
+		background.setIcon(new ImageIcon("./img/backgroundx.png"));
 		background.setBounds(0, 0, 800, 600);
 	    add(background);
 	}

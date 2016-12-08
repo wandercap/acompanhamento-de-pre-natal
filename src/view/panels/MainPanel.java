@@ -1,7 +1,6 @@
 package view.panels;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
@@ -11,6 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import view.FontsProj;
 import view.panels.gestante.*;
 
 /**
@@ -33,6 +33,8 @@ public class MainPanel extends JPanel {
 		setLayout(null);
 		//setUndecorated(true);
 		
+		FontsProj fontes = new FontsProj();
+		
 		JButton btnCadastrarGestante = new JButton("Cadastrar Gestante");
 		btnCadastrarGestante.setToolTipText("Cadastrar Gestante");
 		btnCadastrarGestante.addActionListener(new ActionListener() {
@@ -42,7 +44,7 @@ public class MainPanel extends JPanel {
 				frame.repaint();
 			}
 		});
-		btnCadastrarGestante.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnCadastrarGestante.setFont(fontes.Raleway);
 		btnCadastrarGestante.setForeground(new Color(255, 255, 255));
 		btnCadastrarGestante.setBackground(new Color(153, 51, 255));
 		btnCadastrarGestante.setBorder(null);
@@ -58,7 +60,7 @@ public class MainPanel extends JPanel {
 			}
 		});
 		btnRemoverGestante.setToolTipText("Remover Gestante");
-		btnRemoverGestante.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnRemoverGestante.setFont(fontes.Raleway);
 		btnRemoverGestante.setForeground(new Color(255, 255, 255));
 		btnRemoverGestante.setBackground(new Color(153, 51, 255));
 		btnRemoverGestante.setBorder(null);
@@ -76,7 +78,7 @@ public class MainPanel extends JPanel {
 		});
 		btnListaGestantes.setBackground(new Color(153, 51, 255));
 		btnListaGestantes.setForeground(new Color(255, 255, 255));
-		btnListaGestantes.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnListaGestantes.setFont(fontes.Raleway);
 		btnListaGestantes.setBorder(null);
 		btnListaGestantes.setBounds(250, 297, 300, 40);
 		add(btnListaGestantes);
@@ -90,7 +92,7 @@ public class MainPanel extends JPanel {
 				System.exit(0);
 			}
 		});
-		btnSair.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnSair.setFont(fontes.Raleway);
 		btnSair.setForeground(new Color(255, 255, 255));
 		btnSair.setBackground(new Color(153, 51, 255));
 		btnSair.setBorder(null);
@@ -98,13 +100,13 @@ public class MainPanel extends JPanel {
 		add(btnSair);
 		
 		JLabel lblMeDigital = new JLabel("M@e Digital");
-		lblMeDigital.setFont(new Font("UnDinaru", Font.BOLD, 50));
+		lblMeDigital.setFont(fontes.unDinaruBM);
 		lblMeDigital.setForeground(new Color(255, 255, 255));
 		lblMeDigital.setBounds(271, 35, 260, 75);
 		add(lblMeDigital);
 		
 		JLabel background = new JLabel();
-		background.setIcon(new ImageIcon("/home/wanderlan/workspace/M@e Digital/img/background.png"));
+		background.setIcon(new ImageIcon("./img/backgroundx.png"));
 		background.setBounds(0, 0, 800, 600);
 	    add(background);
 	}

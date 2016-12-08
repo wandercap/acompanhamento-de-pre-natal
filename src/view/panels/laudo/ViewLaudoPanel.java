@@ -1,7 +1,6 @@
 package view.panels.laudo;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -17,6 +16,7 @@ import javax.swing.border.EmptyBorder;
 
 import control.dao.textfiledao.TextFileLaudoDao;
 import model.Laudo;
+import view.FontsProj;
 
 /**
  * A classe {@code ViewLaudoPanel} gera o panel para a visualizacao de um laudo
@@ -45,24 +45,26 @@ public class ViewLaudoPanel extends JPanel {
 		setBorder(new EmptyBorder(5, 5, 5, 5));
 		setLayout(null);
 		
+		FontsProj fontes = new FontsProj();
+		
 		newLaudo = new TextFileLaudoDao();
 		laudo = newLaudo.buscar(idProc, idExam);
 		
 		JLabel lblData = new JLabel("Data");
 		lblData.setBounds(50, 134, 70, 15);
 		lblData.setForeground(new Color(255, 255, 255));
-		lblData.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		lblData.setFont(fontes.unDinaru);
 		add(lblData);
 		
 		JLabel lblPrescricao = new JLabel("Laudo");
 		lblPrescricao.setBounds(336, 35, 108, 48);
-		lblPrescricao.setFont(new Font("UnDinaru", Font.BOLD, 40));
+		lblPrescricao.setFont(fontes.unDinaruB);
 		lblPrescricao.setForeground(new Color(255, 255, 255));
 		add(lblPrescricao);
 		
 		JLabel lblEspecialidade = new JLabel("Especialidade");
 		lblEspecialidade.setBounds(216, 134, 114, 15);
-		lblEspecialidade.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		lblEspecialidade.setFont(fontes.unDinaru);
 		lblEspecialidade.setForeground(new Color(255, 255, 255));
 		add(lblEspecialidade);
 		
@@ -72,7 +74,7 @@ public class ViewLaudoPanel extends JPanel {
 		txtEspec.setToolTipText("");
 		txtEspec.setBorder(null);
 		txtEspec.setText(laudo.getEspecialidade());
-		txtEspec.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		txtEspec.setFont(fontes.unDinaru);
 		txtEspec.setForeground(new Color(255, 255, 255));
 		add(txtEspec);
 		txtEspec.setColumns(10);
@@ -80,7 +82,7 @@ public class ViewLaudoPanel extends JPanel {
 		JLabel lblMedico = new JLabel("Médico");
 		lblMedico.setBounds(428, 134, 114, 15);
 		lblMedico.setForeground(new Color(255, 255, 255));
-		lblMedico.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		lblMedico.setFont(fontes.unDinaru);
 		add(lblMedico);
 		
 		txtMedico = new JTextField();
@@ -89,7 +91,7 @@ public class ViewLaudoPanel extends JPanel {
 		txtMedico.setToolTipText("");
 		txtMedico.setBorder(null);
 		txtMedico.setText(laudo.getMedico());
-		txtMedico.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		txtMedico.setFont(fontes.unDinaru);
 		txtMedico.setForeground(new Color(255, 255, 255));
 		add(txtMedico);
 		txtMedico.setColumns(10);
@@ -105,7 +107,7 @@ public class ViewLaudoPanel extends JPanel {
 		btnVoltar.setToolTipText("Voltar");
 		btnVoltar.setBackground(new Color(153, 51, 255));
 		btnVoltar.setForeground(new Color(255, 255, 255));
-		btnVoltar.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnVoltar.setFont(fontes.Raleway);
 		btnVoltar.setBorder(null);
 		btnVoltar.setBounds(50, 530, 200, 40);
 		add(btnVoltar);
@@ -122,18 +124,18 @@ public class ViewLaudoPanel extends JPanel {
 		txtLaudo.setBackground(new Color(153, 51, 255));
 		txtLaudo.setForeground(new Color(255, 255, 255));
 		txtLaudo.setText(laudo.getLaudo());
-		txtLaudo.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		txtLaudo.setFont(fontes.unDinaru);
 		txtLaudo.setBounds(50, 209, 700, 300);
 		add(txtLaudo);
 		
 		JLabel lblLaudo = new JLabel("Laudo");
 		lblLaudo.setForeground(Color.WHITE);
-		lblLaudo.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		lblLaudo.setFont(fontes.unDinaru);
 		lblLaudo.setBounds(50, 191, 114, 15);
 		add(lblLaudo);
 		
 		JLabel background = new JLabel();
-		background.setIcon(new ImageIcon("/home/wanderlan/workspace/M@e Digital/img/background.png"));
+		background.setIcon(new ImageIcon("./img/backgroundx.png"));
 		background.setBounds(0, 0, 800, 600);
 	    add(background);
 	}

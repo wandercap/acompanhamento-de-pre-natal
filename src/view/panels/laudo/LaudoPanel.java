@@ -1,7 +1,6 @@
 package view.panels.laudo;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,6 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import view.FontsProj;
 import view.panels.MainPanel;
 import view.panels.ProntuarioPanel;
 
@@ -37,6 +37,8 @@ public class LaudoPanel extends JPanel {
 		setLayout(null);
 		//setUndecorated(true);
 		
+		FontsProj fontes = new FontsProj();
+		
 		JButton btnAltLaudo = new JButton("Alterar Laudo");
 		btnAltLaudo.setToolTipText("Alterar Laudo");
 		btnAltLaudo.addActionListener(new ActionListener() {
@@ -46,7 +48,7 @@ public class LaudoPanel extends JPanel {
 				frame.repaint();
 			}
 		});
-		btnAltLaudo.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnAltLaudo.setFont(fontes.Raleway);
 		btnAltLaudo.setForeground(new Color(255, 255, 255));
 		btnAltLaudo.setBackground(new Color(153, 51, 255));
 		btnAltLaudo.setBorder(null);
@@ -62,7 +64,7 @@ public class LaudoPanel extends JPanel {
 			}
 		});
 		btnConsLaudo.setToolTipText("Consultar Laudo");
-		btnConsLaudo.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnConsLaudo.setFont(fontes.Raleway);
 		btnConsLaudo.setForeground(new Color(255, 255, 255));
 		btnConsLaudo.setBackground(new Color(153, 51, 255));
 		btnConsLaudo.setBorder(null);
@@ -78,7 +80,7 @@ public class LaudoPanel extends JPanel {
 				frame.repaint();
 			}
 		});
-		btnVoltar.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnVoltar.setFont(fontes.Raleway);
 		btnVoltar.setForeground(new Color(255, 255, 255));
 		btnVoltar.setBackground(new Color(153, 51, 255));
 		btnVoltar.setBorder(null);
@@ -86,7 +88,7 @@ public class LaudoPanel extends JPanel {
 		add(btnVoltar);
 		
 		JLabel lblLaudo = new JLabel("Laudo");
-		lblLaudo.setFont(new Font("UnDinaru", Font.BOLD, 40));
+		lblLaudo.setFont(fontes.unDinaruB);
 		lblLaudo.setForeground(new Color(255, 255, 255));
 		lblLaudo.setBounds(350, 35, 106, 75);
 		add(lblLaudo);
@@ -101,7 +103,7 @@ public class LaudoPanel extends JPanel {
 		});
 		btnCadLaudo.setToolTipText("Cadastrar Laudo");
 		btnCadLaudo.setForeground(Color.WHITE);
-		btnCadLaudo.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnCadLaudo.setFont(fontes.Raleway);
 		btnCadLaudo.setBackground(new Color(153, 51, 255));
 		btnCadLaudo.setBorder(null);
 		btnCadLaudo.setBounds(250, 135, 300, 40);
@@ -117,14 +119,14 @@ public class LaudoPanel extends JPanel {
 		});
 		btnInicio.setToolTipText("Inicio");
 		btnInicio.setForeground(Color.WHITE);
-		btnInicio.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnInicio.setFont(fontes.Raleway);
 		btnInicio.setBorder(null);
 		btnInicio.setBackground(new Color(153, 51, 255));
 		btnInicio.setBounds(250, 480, 300, 40);
 		add(btnInicio);
 		
 		JLabel background = new JLabel();
-		background.setIcon(new ImageIcon("/home/wanderlan/workspace/M@e Digital/img/background.png"));
+		background.setIcon(new ImageIcon("./img/backgroundx.png"));
 		background.setBounds(0, 0, 800, 600);
 	    add(background);
 	}

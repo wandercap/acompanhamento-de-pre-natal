@@ -1,7 +1,6 @@
 package view.panels.consulta;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -21,6 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 import control.dao.textfiledao.TextFileConsultaDao;
 import model.Consulta;
+import view.FontsProj;
 
 /**
  * A classe {@code ListConsAgendPanel} gera o panel com a lista de consultas agendadas
@@ -43,9 +43,11 @@ public class ListConsAgendPanel extends JPanel {
 		setBorder(new EmptyBorder(5, 5, 5, 5));
 		setLayout(null);
 		
+		FontsProj fontes = new FontsProj();
+		
 		JLabel lblConsultasAgendadas = new JLabel("Consultas Agendadas");
 		lblConsultasAgendadas.setBounds(220, 35, 393, 48);
-		lblConsultasAgendadas.setFont(new Font("UnDinaru", Font.BOLD, 40));
+		lblConsultasAgendadas.setFont(fontes.unDinaruB);
 		lblConsultasAgendadas.setForeground(new Color(255, 255, 255));
 		add(lblConsultasAgendadas);
 		
@@ -60,7 +62,7 @@ public class ListConsAgendPanel extends JPanel {
 		btnVoltar.setToolTipText("Voltar");
 		btnVoltar.setBackground(new Color(153, 51, 255));
 		btnVoltar.setForeground(new Color(255, 255, 255));
-		btnVoltar.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnVoltar.setFont(fontes.Raleway);
 		btnVoltar.setBorder(null);
 		btnVoltar.setBounds(50, 530, 200, 40);
 		add(btnVoltar);
@@ -111,7 +113,7 @@ public class ListConsAgendPanel extends JPanel {
 		}
 		
 		JLabel background = new JLabel();
-		background.setIcon(new ImageIcon("/home/wanderlan/workspace/M@e Digital/img/background.png"));
+		background.setIcon(new ImageIcon("./img/backgroundx.png"));
 		background.setBounds(0, 0, 800, 600);
 	    add(background);
 	}

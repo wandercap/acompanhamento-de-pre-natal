@@ -1,7 +1,6 @@
 package view.panels.prescricao;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -18,6 +17,7 @@ import javax.swing.JTextArea;
 
 import control.dao.textfiledao.TextFilePrescricaoDao;
 import model.Prescricao;
+import view.FontsProj;
 
 /**
  * A classe {@code CadPrescPanel} gera o panel para o cadastro de uma Prescricao
@@ -44,21 +44,23 @@ public class CadPrescPanel extends JPanel {
 		setBorder(new EmptyBorder(5, 5, 5, 5));
 		setLayout(null);
 		
+		FontsProj fontes = new FontsProj();
+		
 		JLabel lblData = new JLabel("Data");
 		lblData.setBounds(196, 137, 70, 15);
 		lblData.setForeground(new Color(255, 255, 255));
-		lblData.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		lblData.setFont(fontes.unDinaru);
 		add(lblData);
 		
 		JLabel lblCadastrarPrescricao = new JLabel("Cadastrar Precrição");
 		lblCadastrarPrescricao.setBounds(235, 35, 336, 48);
-		lblCadastrarPrescricao.setFont(new Font("UnDinaru", Font.BOLD, 40));
+		lblCadastrarPrescricao.setFont(fontes.unDinaruB);
 		lblCadastrarPrescricao.setForeground(new Color(255, 255, 255));
 		add(lblCadastrarPrescricao);
 		
 		JLabel lblEspecialidade = new JLabel("Especialidade");
 		lblEspecialidade.setBounds(362, 137, 114, 15);
-		lblEspecialidade.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		lblEspecialidade.setFont(fontes.unDinaru);
 		lblEspecialidade.setForeground(new Color(255, 255, 255));
 		add(lblEspecialidade);
 		
@@ -66,7 +68,7 @@ public class CadPrescPanel extends JPanel {
 		txtEspec.setBounds(362, 152, 244, 30);
 		txtEspec.setToolTipText("");
 		txtEspec.setBorder(null);
-		txtEspec.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		txtEspec.setFont(fontes.unDinaru);
 		txtEspec.setForeground(new Color(102, 102, 102));
 		add(txtEspec);
 		txtEspec.setColumns(10);
@@ -74,14 +76,14 @@ public class CadPrescPanel extends JPanel {
 		JLabel lblMedico = new JLabel("Médico");
 		lblMedico.setBounds(196, 194, 114, 15);
 		lblMedico.setForeground(new Color(255, 255, 255));
-		lblMedico.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		lblMedico.setFont(fontes.unDinaru);
 		add(lblMedico);
 		
 		txtMedico = new JTextField();
 		txtMedico.setBounds(196, 209, 410, 30);
 		txtMedico.setToolTipText("");
 		txtMedico.setBorder(null);
-		txtMedico.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		txtMedico.setFont(fontes.unDinaru);
 		txtMedico.setForeground(new Color(102, 102, 102));
 		add(txtMedico);
 		txtMedico.setColumns(10);
@@ -99,7 +101,7 @@ public class CadPrescPanel extends JPanel {
 			}
 		});
 		btnCadastrar.setToolTipText("Cadastrar");
-		btnCadastrar.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnCadastrar.setFont(fontes.Raleway);
 		btnCadastrar.setBackground(new Color(153, 51, 255));
 		btnCadastrar.setForeground(new Color(255, 255, 255));
 		btnCadastrar.setBorder(null);
@@ -117,7 +119,7 @@ public class CadPrescPanel extends JPanel {
 		btnVoltar.setToolTipText("Voltar");
 		btnVoltar.setBackground(new Color(153, 51, 255));
 		btnVoltar.setForeground(new Color(255, 255, 255));
-		btnVoltar.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnVoltar.setFont(fontes.Raleway);
 		btnVoltar.setBorder(null);
 		btnVoltar.setBounds(50, 530, 200, 40);
 		add(btnVoltar);
@@ -130,18 +132,18 @@ public class CadPrescPanel extends JPanel {
 		txtPresc = new JTextArea();
 		txtPresc.setBorder(null);
 		txtPresc.setForeground(new Color(102, 102, 102));
-		txtPresc.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		txtPresc.setFont(fontes.unDinaru);
 		txtPresc.setBounds(196, 269, 410, 240);
 		add(txtPresc);
 		
 		JLabel lblPrescrio = new JLabel("Prescrição");
 		lblPrescrio.setForeground(Color.WHITE);
-		lblPrescrio.setFont(new Font("UnDinaru", Font.PLAIN, 15));
+		lblPrescrio.setFont(fontes.unDinaru);
 		lblPrescrio.setBounds(196, 251, 114, 15);
 		add(lblPrescrio);
 		
 		JLabel background = new JLabel();
-		background.setIcon(new ImageIcon("/home/wanderlan/workspace/M@e Digital/img/background.png"));
+		background.setIcon(new ImageIcon("./img/backgroundx.png"));
 		background.setBounds(0, 0, 800, 600);
 	    add(background);
 	}

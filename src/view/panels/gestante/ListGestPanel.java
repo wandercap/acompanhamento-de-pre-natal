@@ -1,7 +1,6 @@
 package view.panels.gestante;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -17,6 +16,7 @@ import javax.swing.table.DefaultTableModel;
 
 import control.dao.textfiledao.TextFileGestanteDao;
 import model.Gestante;
+import view.FontsProj;
 import view.panels.MainPanel;
 import view.panels.ProntuarioPanel;
 
@@ -43,9 +43,11 @@ public class ListGestPanel extends JPanel {
 		setBorder(new EmptyBorder(5, 5, 5, 5));
 		setLayout(null);
 		
+		FontsProj fontes = new FontsProj();
+		
 		JLabel lblGestantesCadastradas = new JLabel("Gestantes Cadastradas");
 		lblGestantesCadastradas.setBounds(220, 35, 393, 48);
-		lblGestantesCadastradas.setFont(new Font("UnDinaru", Font.BOLD, 40));
+		lblGestantesCadastradas.setFont(fontes.unDinaruB);
 		lblGestantesCadastradas.setForeground(new Color(255, 255, 255));
 		add(lblGestantesCadastradas);
 		
@@ -60,7 +62,7 @@ public class ListGestPanel extends JPanel {
 		btnVoltar.setToolTipText("Voltar");
 		btnVoltar.setBackground(new Color(153, 51, 255));
 		btnVoltar.setForeground(new Color(255, 255, 255));
-		btnVoltar.setFont(new Font("Raleway", Font.PLAIN, 20));
+		btnVoltar.setFont(fontes.Raleway);
 		btnVoltar.setBorder(null);
 		btnVoltar.setBounds(50, 530, 200, 40);
 		add(btnVoltar);
@@ -102,7 +104,7 @@ public class ListGestPanel extends JPanel {
 		}
 		
 		JLabel background = new JLabel();
-		background.setIcon(new ImageIcon("/home/wanderlan/workspace/M@e Digital/img/background.png"));
+		background.setIcon(new ImageIcon("./img/backgroundx.png"));
 		background.setBounds(0, 0, 800, 600);
 	    add(background);
 		
